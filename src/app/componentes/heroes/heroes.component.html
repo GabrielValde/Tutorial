@@ -6,9 +6,17 @@
             <span class="badge">
                 {{Heroes.id}}          
             </span>
-            <span>
+            
                 {{Heroes.name}}          
-            </span>
-    </a>
+            
+        </a>
+    <button type="button" class="delete" title="Borrar heroe" (click)="Borrar_heroe(Heroes)">X</button>
     </li>
 </ul>
+
+<div>
+    <label for="new-hero">Nombre del heroe: </label>
+    <input type="text" id="new-hero" #NombreHeroe/>
+
+    <button type="button" class="add-button" (click)="Agregar_Heroe(NombreHeroe.value)"> Agregar heroe</button>
+</div>

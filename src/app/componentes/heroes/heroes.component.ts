@@ -17,7 +17,19 @@ export class HeroesComponent implements OnInit {
   constructor(private Servicio:HeroeServicioService, private Mensajes:MensajesService) { 
 
   }
+  Agregar_Heroe(Nombre:string):void{
+    Nombre= Nombre.trim();
+    if (!Nombre){return;}
+    this.Servicio.Agregar_heroe({ name:Nombre } as Hero  ).subscribe(HeroeAgregado =>{
+      this.Heroes.push(HeroeAgregado);
+    })
 
+  }
+
+  Borrar_heroe(heroe:Hero){
+      this.Heroes= this.Heroes.filter(h => h!== heroe);
+      this.Servicio.Borrar_heroe(Number(heroe.id)).subscribe();
+  }
   ngOnInit(): void {
     this.get_heroes();
   }

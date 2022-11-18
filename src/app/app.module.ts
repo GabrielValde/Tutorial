@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from "@angular/common/http"
 //Api para guardar en memoria
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api'
-import { InMemoryDataService } from './Servicios/in-memory-data.service';
+import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './componentes/heroes/heroes.component';

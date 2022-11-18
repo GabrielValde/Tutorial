@@ -14,10 +14,6 @@ export class HeroesComponent implements OnInit {
     this.Servicio.getHeroes().subscribe(heroes => this.Heroes = heroes);
   }
   
-  onSelect(Seleccionado:Hero){
-    this.Heroe_Seleccionado=Seleccionado;
-    this.Mensajes.add("Componente de heroe: Heroe seleccionado id=" + this.Heroe_Seleccionado.id)
-  }
   constructor(private Servicio:HeroeServicioService, private Mensajes:MensajesService) { 
 
   }

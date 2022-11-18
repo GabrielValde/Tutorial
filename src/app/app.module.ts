@@ -2,6 +2,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
+import {HttpClientModule} from "@angular/common/http"
+//Api para guardar en memoria
+import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api'
+import { InMemoryDataService } from './Servicios/in-memory-data.service';
+
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './componentes/heroes/heroes.component';
 import { HeroesDetallesComponent } from './componentes/heroes-detalles/heroes-detalles.component';
@@ -20,7 +25,10 @@ import { DashboardComponent } from './componentes/dashboard/dashboard.component'
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService,{dataEncapsulation:false})
   ],
   providers: [],
   bootstrap: [AppComponent]

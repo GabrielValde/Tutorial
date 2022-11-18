@@ -5,16 +5,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './componentes/heroes/heroes.component';
 import { HeroesDetallesComponent } from './componentes/heroes-detalles/heroes-detalles.component';
+import { MensajeComponent } from './componentes/mensaje/mensaje.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
-    HeroesDetallesComponent
+    HeroesDetallesComponent,
+    MensajeComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

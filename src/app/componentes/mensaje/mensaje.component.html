@@ -1,0 +1,8 @@
+<div *ngIf="Mensaje.messages.length">
+
+    <h2>Mensajes</h2>
+    <button type="button" class="clear"
+            (click)="Mensaje.clear()">Limpiar bandeja</button>
+    <div *ngFor='let message of Mensaje.messages'> {{message}} </div>
+  
+  </div>
